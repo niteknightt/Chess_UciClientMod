@@ -45,7 +45,7 @@ publishing {
         gpr(MavenPublication) {
             groupId='niteknightt.chess'
             artifactId='uciclientmod'
-            version='0.2'
+            version='0.3'
             from(components.java)
         }
     }
