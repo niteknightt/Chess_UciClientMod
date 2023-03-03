@@ -26,6 +26,8 @@ import static java.util.concurrent.CompletableFuture.supplyAsync;
 import static java.util.function.Function.identity;
 import static net.andreinc.neatchess.client.breaks.Break.breakOn;
 
+import niteknightt.chess.common.UciIoLogger;
+
 public class UciMod {
 
     private static final String STOCKFISH = "stockfish";
@@ -46,13 +48,13 @@ public class UciMod {
     private UciIoLogger logger = null;
     private String gameId = null;
 
-    public UCI(long defaultTimeout, UciIoLogger logger, String gameId) {
+    public UciMod(long defaultTimeout, UciIoLogger logger, String gameId) {
         this.defaultTimeout = defaultTimeout;
         this.logger = logger;
         this.gameId = gameId;
     }
 
-    public UCI(UciIoLogger logger, String gameId) {
+    public UciMod(UciIoLogger logger, String gameId) {
         this(DEFAULT_TIMEOUT_VALUE, logger, gameId);
     }
 
